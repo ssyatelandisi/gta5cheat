@@ -1,0 +1,88 @@
+name: Project Release
+
+on:
+  push:
+    tags:
+    - v*
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: windows-2019
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Python 3.10
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pyinstaller pyqt5 cffi
+      - name: DLL Building
+        run: |
+          path=$(pwd)
+          cd cpp
+          if [ -d build ]
+          then
+              rm -rf build
+          fi
+          cmake -S. -G "MinGW Makefiles" -B build
+          cmake --build build
+          if [ -f ./build/lib/libgtaLib.dll ]
+          then
+              cp ./build/lib/libgtaLib.dll ./build/lib/gtaLib.dll
+          else
+              echo "未找到libgtaLib.dll"
+          fi
+          cd $path
+        shell: bash
+      - name: Download UPX
+        run: |
+          curl --location --request GET 'https://github.com/upx/upx/releases/download/v3.96/upx-3.96-win64.zip' \
+          --header 'referer: https://github.com/upx/upx/releases' \
+          --header 'user-agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/104.0.0.0 Safari/537.36' \
+          --output 'upx-3.96-win64.zip'
+          7z x upx-3.96-win64.zip
+          mv ./upx-3.96-win64/upx.exe ./upx.exe
+        shell: bash
+      - name: Python Building
+        run: |
+          if exist "dist" (
+              rmdir /s /q dist
+          )
+          if exist "GTAV Cheat.spec" (
+              del /q *.spec
+          )
+          pyinstaller -w .\src\app.py --uac-admin -i icon.ico --version-file=version_info.txt -n="GTAV Cheat" --add-data="teleports.txt;.\\" --add-binary=".\cpp\build\lib\gtaLib.dll;.\\" --clean -y
+          if exist "teleports.txt" (
+              copy teleports.txt "dist\GTAV Cheat\teleports.txt" /y
+          )
+          if exist "YimMenu.dll" (
+              copy teleports.txt "dist\GTAV Cheat\YimMenu.dll" /y
+          )
+          cd dist
+          7z a "GTAV_Cheat.zip" "GTAV Cheat" -tZIP
+        shell: cmd
+      - name: Create Release
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          tag_name: ${{ github.ref }}
+          release_name: Release ${{ github.ref }}
+          draft: false
+          prerelease: false
+      - name: Upload Release Asset
+        id: upload-release-asset
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./dist/GTAV_Cheat.zip
+          asset_name: GTAV_Cheat.zip
+          asset_content_type: application/zip

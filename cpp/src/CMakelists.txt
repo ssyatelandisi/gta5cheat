@@ -1,0 +1,11 @@
+file(GLOB SOURCE "*.cpp")
+# add_executable(main ${SOURCE} ${RE_FILE}) #生成可执行文件
+include_directories(".") #外部头文件地址
+# link_directories(".") #外部库文件地址
+add_library(gtaLib_static STATIC ${SOURCE}) #生成库文件
+target_link_libraries(gtaLib_static stdc++ gcc winpthread) #外部链接库
+set_target_properties(gtaLib_static PROPERTIES OUTPUT_NAME gtaLib)
+set_target_properties(gtaLib_static PROPERTIES CLEAN_DIRECT_OUTPUT 1)
+add_library(gtaLib SHARED ${SOURCE} ${RE_FILE} gtaLib.def)
+set_target_properties(gtaLib PROPERTIES OUTPUT_NAME gtaLib)
+set_target_properties(gtaLib PROPERTIES CLEAN_DIRECT_OUTPUT 1)
