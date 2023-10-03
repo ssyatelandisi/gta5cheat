@@ -1,0 +1,3 @@
+[submodule "gtaLib"]
+	path = gtaLib
+	url = https://github.com/ssyatelandisi/gtaLib.git

@@ -1,0 +1,1605 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>App</class>
+ <widget class="QWidget" name="App">
+  <property name="windowModality">
+   <enum>Qt::ApplicationModal</enum>
+  </property>
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>810</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>500</width>
+    <height>810</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>500</width>
+    <height>810</height>
+   </size>
+  </property>
+  <property name="sizeIncrement">
+   <size>
+    <width>0</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="baseSize">
+   <size>
+    <width>0</width>
+    <height>30</height>
+   </size>
+  </property>
+  <property name="font">
+   <font>
+    <family>思源黑体 常规</family>
+    <pointsize>-1</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>GTAOL辅助</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../resource/resource.qrc">
+    <normaloff>:/image/icon_16.ico</normaloff>:/image/icon_16.ico</iconset>
+  </property>
+  <property name="windowOpacity">
+   <double>1.000000000000000</double>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget{
+font-size:16px;
+font-family:'思源黑体 常规',‘Microsoft YaHei UI’,微软雅黑;
+}</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout_2">
+   <item row="0" column="0">
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="usesScrollButtons">
+      <bool>true</bool>
+     </property>
+     <property name="tabsClosable">
+      <bool>false</bool>
+     </property>
+     <property name="movable">
+      <bool>false</bool>
+     </property>
+     <property name="tabBarAutoHide">
+      <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="tab_1">
+      <attribute name="title">
+       <string>常用</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_6">
+       <item row="14" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <item>
+          <widget class="QPushButton" name="pushButton_fillCurrentAmmo">
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>补充弹药</string>
+           </property>
+           <property name="autoDefault">
+            <bool>false</bool>
+           </property>
+           <property name="default">
+            <bool>false</bool>
+           </property>
+           <property name="flat">
+            <bool>false</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_8">
+           <property name="text">
+            <string>CTRL + R</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QCheckBox" name="checkBox_godMode">
+           <property name="text">
+            <string>玩家无敌</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_7">
+           <property name="text">
+            <string>F7 开/CTRL + F7 关</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="28" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
+         <item>
+          <widget class="QComboBox" name="comboBox_session"/>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_14">
+           <property name="text">
+            <string>CTRL + F11</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="19" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QPushButton" name="pushButton_teleportToObjective">
+           <property name="text">
+            <string>目标点传送</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>F5</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="10" column="0">
+        <widget class="QCheckBox" name="checkBox_vehicleGodMode">
+         <property name="text">
+          <string>载具无敌</string>
+         </property>
+        </widget>
+       </item>
+       <item row="20" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QPushButton" name="pushButton_noCops">
+           <property name="text">
+            <string>消除通缉</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_11">
+           <property name="text">
+            <string>F8</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="30" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="label_3">
+           <property name="text">
+            <string>末日买左卡右</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_16">
+           <property name="text">
+            <string>CTRL + 1</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="29" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_12">
+         <item>
+          <widget class="QPushButton" name="pushButton_solo">
+           <property name="text">
+            <string>10s卡单人战局</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="18" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QPushButton" name="pushButton_teleportToWaypoint">
+           <property name="text">
+            <string>导航点传送</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_10">
+           <property name="text">
+            <string>F4</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="4" column="0">
+        <widget class="QCheckBox" name="checkBox_autoCure">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>自动回血</string>
+         </property>
+        </widget>
+       </item>
+       <item row="22" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QPushButton" name="pushButton_vehicleRepairing">
+           <property name="text">
+            <string>修复载具</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_6">
+           <property name="text">
+            <string>CTRL + F9</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="31" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="label_4">
+           <property name="text">
+            <string>末日买左卡右下</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_17">
+           <property name="text">
+            <string>CTRL + 2</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="12" column="0">
+        <widget class="QCheckBox" name="checkBox_infiniteAmmo">
+         <property name="text">
+          <string>无限弹药</string>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QComboBox" name="comboBox_vehicleAbilities">
+           <item>
+            <property name="text">
+             <string>载具能力</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_9">
+           <property name="text">
+            <string>F6</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="26" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QPushButton" name="pushButton_killYourself">
+           <property name="text">
+            <string>自杀</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_12">
+           <property name="text">
+            <string>CTRL + DEL</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <widget class="QLabel" name="label">
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
+         </property>
+         <property name="text">
+          <string>功能</string>
+         </property>
+        </widget>
+       </item>
+       <item row="33" column="0" colspan="2">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkBox_killGTA">
+         <property name="text">
+          <string>开启 F1 杀死GTA5进程</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="checkBox_antiAFK">
+         <property name="text">
+          <string>挂机防踢</string>
+         </property>
+        </widget>
+       </item>
+       <item row="34" column="0" colspan="2">
+        <widget class="QLabel" name="label_22">
+         <property name="font">
+          <font>
+           <family>思源黑体 常规</family>
+           <pointsize>-1</pointsize>
+           <italic>true</italic>
+          </font>
+         </property>
+         <property name="text">
+          <string>末日3卡 试验场情报 CTRL + 2</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QCheckBox" name="checkBox_seatbelt">
+         <property name="text">
+          <string>安全带</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="label_2">
+         <property name="text">
+          <string>快捷键</string>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_22">
+         <item>
+          <widget class="QComboBox" name="comboBox_weaponAmmoType">
+           <item>
+            <property name="text">
+             <string>子弹类型</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_27">
+           <property name="text">
+            <string>子弹类型</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="15" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_10">
+         <item>
+          <widget class="QComboBox" name="comboBox_vehicles">
+           <item>
+            <property name="text">
+             <string>刷载具</string>
+            </property>
+           </item>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_26">
+           <property name="text">
+            <string>CTRL + ~ 刷出载具</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="17" column="0" colspan="2">
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QPushButton" name="pushButton_moveForward">
+           <property name="text">
+            <string>往前移动</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="label_38">
+           <property name="text">
+            <string>F3</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_2">
+      <attribute name="title">
+       <string>传送</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_3">
+       <item row="5" column="0" colspan="4">
+        <widget class="QPushButton" name="pushButton_saveTable">
+         <property name="text">
+          <string>保存列表</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2" colspan="2">
+        <widget class="QPushButton" name="pushButton_addLocalPosition">
+         <property name="text">
+          <string>添加当前位置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QLineEdit" name="lineEdit_nameInput">
+         <property name="placeholderText">
+          <string>新增名称</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QCheckBox" name="checkBox_continuousTeleportation">
+         <property name="text">
+          <string>持续传送</string>
+         </property>
+         <property name="tristate">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1" colspan="3">
+        <widget class="QPushButton" name="pushButton_teleportEnemyNPC">
+         <property name="styleSheet">
+          <string notr="true">QPushButton {
+color: #FFFFFF;
+background-color:rgba(255, 0, 0, 180);
+}
+:pressed {background-color:rgba(255, 0, 0, 255);}</string>
+         </property>
+         <property name="text">
+          <string>传送敌对NPC到选定位置</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2" colspan="2">
+        <widget class="QPushButton" name="pushButton_teleportToSelectedPosition">
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+color: rgb(255, 255, 255);
+background-color: rgba(170, 0, 255, 180);
+}
+:pressed{background-color: rgba(170, 0, 255, 255);}</string>
+         </property>
+         <property name="text">
+          <string>传送到选中</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0" colspan="2">
+        <widget class="QPushButton" name="pushButton_delSelect">
+         <property name="text">
+          <string>删除行</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="4">
+        <widget class="QTableView" name="tableView_teleport">
+         <property name="focusPolicy">
+          <enum>Qt::WheelFocus</enum>
+         </property>
+         <property name="selectionMode">
+          <enum>QAbstractItemView::SingleSelection</enum>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="gridStyle">
+          <enum>Qt::SolidLine</enum>
+         </property>
+         <property name="sortingEnabled">
+          <bool>true</bool>
+         </property>
+         <attribute name="horizontalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="horizontalHeaderHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="horizontalHeaderStretchLastSection">
+          <bool>true</bool>
+         </attribute>
+         <attribute name="verticalHeaderCascadingSectionResizes">
+          <bool>true</bool>
+         </attribute>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_3">
+      <attribute name="title">
+       <string>分红</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_10">
+       <item row="0" column="0">
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>公寓豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout">
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QLabel" name="label_18">
+              <property name="text">
+               <string>玩家3</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut3_apartmentHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut3_apartmentHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_2">
+            <item>
+             <widget class="QLabel" name="label_15">
+              <property name="text">
+               <string>玩家2</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut2_apartmentHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut2_apartmentHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout">
+            <item>
+             <widget class="QLabel" name="label_13">
+              <property name="text">
+               <string>主机</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut1_apartmentHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut1_apartmentHeist">
+              <property name="enabled">
+               <bool>true</bool>
+              </property>
+              <property name="wrapping">
+               <bool>false</bool>
+              </property>
+              <property name="readOnly">
+               <bool>false</bool>
+              </property>
+              <property name="keyboardTracking">
+               <bool>true</bool>
+              </property>
+              <property name="showGroupSeparator" stdset="0">
+               <bool>false</bool>
+              </property>
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="stepType">
+               <enum>QAbstractSpinBox::DefaultStepType</enum>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <layout class="QVBoxLayout" name="verticalLayout_4">
+            <item>
+             <widget class="QLabel" name="label_19">
+              <property name="text">
+               <string>玩家4</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut4_apartmentHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut4_apartmentHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>末日豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_7">
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_6">
+            <item>
+             <widget class="QLabel" name="label_29">
+              <property name="text">
+               <string>玩家2</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut2_doomsdayHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut2_doomsdayHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <layout class="QVBoxLayout" name="verticalLayout_8">
+            <item>
+             <widget class="QLabel" name="label_21">
+              <property name="text">
+               <string>玩家4</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut4_doomsdayHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut4_doomsdayHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_5">
+            <item>
+             <widget class="QLabel" name="label_20">
+              <property name="text">
+               <string>主机</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut1_doomsdayHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut1_doomsdayHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_7">
+            <item>
+             <widget class="QLabel" name="label_28">
+              <property name="text">
+               <string>玩家3</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut3_doomsdayHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut3_doomsdayHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>赌场豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_8">
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_10">
+            <item>
+             <widget class="QLabel" name="label_33">
+              <property name="text">
+               <string>玩家2</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut2_casinoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut2_casinoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_11">
+            <item>
+             <widget class="QLabel" name="label_32">
+              <property name="text">
+               <string>玩家3</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut3_casinoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut3_casinoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <layout class="QVBoxLayout" name="verticalLayout_12">
+            <item>
+             <widget class="QLabel" name="label_31">
+              <property name="text">
+               <string>玩家4</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut4_casinoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut4_casinoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_9">
+            <item>
+             <widget class="QLabel" name="label_30">
+              <property name="text">
+               <string>主机</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut1_casinoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut1_casinoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="3" column="0">
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>佩里科岛豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_9">
+          <item row="0" column="2">
+           <layout class="QVBoxLayout" name="verticalLayout_15">
+            <item>
+             <widget class="QLabel" name="label_36">
+              <property name="text">
+               <string>玩家3</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut3_pericoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut3_pericoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="0">
+           <layout class="QVBoxLayout" name="verticalLayout_13">
+            <item>
+             <widget class="QLabel" name="label_34">
+              <property name="text">
+               <string>主机</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut1_pericoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut1_pericoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="1">
+           <layout class="QVBoxLayout" name="verticalLayout_14">
+            <item>
+             <widget class="QLabel" name="label_37">
+              <property name="text">
+               <string>玩家2</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut2_pericoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut2_pericoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="0" column="3">
+           <layout class="QVBoxLayout" name="verticalLayout_16">
+            <item>
+             <widget class="QLabel" name="label_35">
+              <property name="text">
+               <string>玩家4</string>
+              </property>
+              <property name="buddy">
+               <cstring>spinBox_playerCut4_pericoHeist</cstring>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QSpinBox" name="spinBox_playerCut4_pericoHeist">
+              <property name="suffix">
+               <string/>
+              </property>
+              <property name="maximum">
+               <number>100</number>
+              </property>
+              <property name="displayIntegerBase">
+               <number>10</number>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="4" column="0">
+        <layout class="QGridLayout" name="gridLayout_4">
+         <item row="0" column="0">
+          <widget class="QPushButton" name="pushButton_readCut">
+           <property name="text">
+            <string>读取</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QPushButton" name="pushButton_writeCut">
+           <property name="text">
+            <string>写入</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="5" column="0">
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_4">
+      <attribute name="title">
+       <string>开发测试</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_5">
+       <item row="4" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_7">
+         <property name="title">
+          <string>赌场豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_14">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_casinoTargetChange">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>主要目标钻石</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_casinoFingerprintHack">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>赌场指纹秒破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_casinoDoorHack">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>赌场门禁点阵秒破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_5">
+         <property name="title">
+          <string>公寓豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_11">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_skipApartmentHeist">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>跳过公寓抢劫准备</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_circuitBreaker">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>全福银行电路破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="8" column="0" colspan="2">
+        <widget class="QLabel" name="label_23">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;赌场佩里科岛修改目标后远离面板再回来可以看到修改后的效果&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_6">
+         <property name="title">
+          <string>末日豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_12">
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_skipDoomsdayHeist">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>跳过末日豪劫前置</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_doomsday1Hack">
+            <property name="text">
+             <string>末日1服务器秒破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_doomsday3Hack">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>末日3激光球秒破解(H)</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="7" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_9">
+         <property name="contextMenuPolicy">
+          <enum>Qt::NoContextMenu</enum>
+         </property>
+         <property name="title">
+          <string>其他</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_15">
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_killEnemyNPC">
+            <property name="text">
+             <string>杀死敌对NPC[/]</string>
+            </property>
+           </widget>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QPushButton" name="pushButton_yimInject">
+            <property name="text">
+             <string>YimMenu修改器注入【游戏中按INSERT显示】</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QCheckBox" name="checkBox_luckyWheel">
+            <property name="text">
+             <string>赌场转盘抽车</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_destroyEnemyVehicles">
+            <property name="text">
+             <string>摧毁敌方载具[*]</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="6" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_8">
+         <property name="title">
+          <string>佩里科岛豪劫</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_13">
+          <item row="1" column="1">
+           <widget class="QPushButton" name="pushButton_pericoHack3">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>指纹秒破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QPushButton" name="pushButton_pericoHack1">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>机场电压秒破解(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QPushButton" name="pushButton_pericoHack4">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>玻璃秒切割(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QPushButton" name="pushButton_pericoHack2">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>下水道栅栏秒切割(CTRL+H)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="0">
+           <widget class="QPushButton" name="pushButton_pericoTargetChange">
+            <property name="enabled">
+             <bool>true</bool>
+            </property>
+            <property name="text">
+             <string>猎豹雕像</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="10" column="0" colspan="2">
+        <spacer name="verticalSpacer_3">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="9" column="0" colspan="2">
+        <widget class="QLabel" name="label_40">
+         <property name="text">
+          <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;赌场转盘抽车要在赌场转盘启用前开启，用完后需要关闭，节省系统资源消耗&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+         </property>
+         <property name="wordWrap">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab">
+      <attribute name="title">
+       <string>STAT导入</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_16">
+       <item row="1" column="0">
+        <widget class="QPushButton" name="pushButton_statSubmit">
+         <property name="enabled">
+          <bool>true</bool>
+         </property>
+         <property name="text">
+          <string>提交</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+         <property name="checked">
+          <bool>false</bool>
+         </property>
+         <property name="autoRepeat">
+          <bool>false</bool>
+         </property>
+         <property name="autoExclusive">
+          <bool>false</bool>
+         </property>
+         <property name="autoDefault">
+          <bool>false</bool>
+         </property>
+         <property name="default">
+          <bool>false</bool>
+         </property>
+         <property name="flat">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0">
+        <widget class="QTextEdit" name="textEdit_statText">
+         <property name="placeholderText">
+          <string>INT32</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tab_5">
+      <attribute name="title">
+       <string>天气和载具</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_17">
+       <item row="1" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_10">
+         <property name="title">
+          <string>载具</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_24">
+            <property name="text">
+             <string>载具代码</string>
+            </property>
+            <property name="buddy">
+             <cstring>lineEdit_vehicleCode</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="lineEdit_vehicleCode"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_25">
+            <property name="text">
+             <string>载具Hash</string>
+            </property>
+            <property name="buddy">
+             <cstring>lineEdit_vehicleHash</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="lineEdit_vehicleHash"/>
+          </item>
+          <item row="2" column="0" colspan="2">
+           <layout class="QHBoxLayout" name="horizontalLayout_15">
+            <item>
+             <widget class="QPushButton" name="pushButton_indoorSpawn">
+              <property name="text">
+               <string>室内刷出载具</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pushButton_outdoorSpawn">
+              <property name="text">
+               <string>室外刷出载具</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="3" column="0" colspan="2">
+           <widget class="QLabel" name="label_39">
+            <property name="font">
+             <font>
+              <family>思源黑体 常规</family>
+              <pointsize>-1</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>载具代码和载具Hash只要填写其一即可。全填写优先使用载具Hash</string>
+            </property>
+            <property name="wordWrap">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="4" column="0" colspan="2">
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item row="0" column="0" colspan="2">
+        <widget class="QGroupBox" name="groupBox_11">
+         <property name="title">
+          <string>天气</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayout_18">
+          <item row="0" column="0">
+           <widget class="QComboBox" name="comboBox_weather">
+            <item>
+             <property name="text">
+              <string>天气</string>
+             </property>
+            </item>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <tabstops>
+  <tabstop>checkBox_killGTA</tabstop>
+  <tabstop>checkBox_antiAFK</tabstop>
+  <tabstop>checkBox_autoCure</tabstop>
+  <tabstop>checkBox_godMode</tabstop>
+  <tabstop>checkBox_seatbelt</tabstop>
+  <tabstop>checkBox_vehicleGodMode</tabstop>
+  <tabstop>checkBox_infiniteAmmo</tabstop>
+  <tabstop>comboBox_weaponAmmoType</tabstop>
+  <tabstop>pushButton_fillCurrentAmmo</tabstop>
+  <tabstop>comboBox_vehicles</tabstop>
+  <tabstop>comboBox_vehicleAbilities</tabstop>
+  <tabstop>pushButton_moveForward</tabstop>
+  <tabstop>pushButton_teleportToWaypoint</tabstop>
+  <tabstop>pushButton_teleportToObjective</tabstop>
+  <tabstop>pushButton_noCops</tabstop>
+  <tabstop>pushButton_vehicleRepairing</tabstop>
+  <tabstop>pushButton_killYourself</tabstop>
+  <tabstop>comboBox_session</tabstop>
+  <tabstop>pushButton_solo</tabstop>
+  <tabstop>tableView_teleport</tabstop>
+  <tabstop>lineEdit_nameInput</tabstop>
+  <tabstop>pushButton_addLocalPosition</tabstop>
+  <tabstop>pushButton_delSelect</tabstop>
+  <tabstop>pushButton_teleportToSelectedPosition</tabstop>
+  <tabstop>checkBox_continuousTeleportation</tabstop>
+  <tabstop>pushButton_teleportEnemyNPC</tabstop>
+  <tabstop>pushButton_saveTable</tabstop>
+  <tabstop>spinBox_playerCut1_apartmentHeist</tabstop>
+  <tabstop>spinBox_playerCut2_apartmentHeist</tabstop>
+  <tabstop>spinBox_playerCut3_apartmentHeist</tabstop>
+  <tabstop>spinBox_playerCut4_apartmentHeist</tabstop>
+  <tabstop>spinBox_playerCut1_doomsdayHeist</tabstop>
+  <tabstop>spinBox_playerCut2_doomsdayHeist</tabstop>
+  <tabstop>spinBox_playerCut3_doomsdayHeist</tabstop>
+  <tabstop>spinBox_playerCut4_doomsdayHeist</tabstop>
+  <tabstop>spinBox_playerCut1_casinoHeist</tabstop>
+  <tabstop>spinBox_playerCut2_casinoHeist</tabstop>
+  <tabstop>spinBox_playerCut3_casinoHeist</tabstop>
+  <tabstop>spinBox_playerCut4_casinoHeist</tabstop>
+  <tabstop>spinBox_playerCut1_pericoHeist</tabstop>
+  <tabstop>spinBox_playerCut2_pericoHeist</tabstop>
+  <tabstop>spinBox_playerCut3_pericoHeist</tabstop>
+  <tabstop>spinBox_playerCut4_pericoHeist</tabstop>
+  <tabstop>pushButton_readCut</tabstop>
+  <tabstop>pushButton_writeCut</tabstop>
+  <tabstop>pushButton_skipApartmentHeist</tabstop>
+  <tabstop>pushButton_circuitBreaker</tabstop>
+  <tabstop>pushButton_skipDoomsdayHeist</tabstop>
+  <tabstop>pushButton_doomsday1Hack</tabstop>
+  <tabstop>pushButton_doomsday3Hack</tabstop>
+  <tabstop>pushButton_casinoTargetChange</tabstop>
+  <tabstop>pushButton_casinoFingerprintHack</tabstop>
+  <tabstop>pushButton_casinoDoorHack</tabstop>
+  <tabstop>pushButton_pericoTargetChange</tabstop>
+  <tabstop>pushButton_pericoHack1</tabstop>
+  <tabstop>pushButton_pericoHack2</tabstop>
+  <tabstop>pushButton_pericoHack3</tabstop>
+  <tabstop>pushButton_pericoHack4</tabstop>
+  <tabstop>checkBox_luckyWheel</tabstop>
+  <tabstop>pushButton_killEnemyNPC</tabstop>
+  <tabstop>pushButton_destroyEnemyVehicles</tabstop>
+  <tabstop>pushButton_yimInject</tabstop>
+  <tabstop>textEdit_statText</tabstop>
+  <tabstop>comboBox_weather</tabstop>
+  <tabstop>lineEdit_vehicleCode</tabstop>
+  <tabstop>lineEdit_vehicleHash</tabstop>
+  <tabstop>pushButton_indoorSpawn</tabstop>
+  <tabstop>pushButton_outdoorSpawn</tabstop>
+  <tabstop>pushButton_statSubmit</tabstop>
+  <tabstop>tabWidget</tabstop>
+ </tabstops>
+ <resources>
+  <include location="../resource/resource.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>pushButton_yimInject</sender>
+   <signal>released()</signal>
+   <receiver>pushButton_yimInject</receiver>
+   <slot>deleteLater()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>119</x>
+     <y>87</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>87</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_continuousTeleportation</sender>
+   <signal>clicked(bool)</signal>
+   <receiver>pushButton_teleportEnemyNPC</receiver>
+   <slot>setDisabled(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>35</x>
+     <y>63</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>101</x>
+     <y>63</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
